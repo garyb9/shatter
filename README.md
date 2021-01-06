@@ -1,2 +1,2 @@
 # Earthshatter
-Dank website
+Django REST API using React on Froentend
