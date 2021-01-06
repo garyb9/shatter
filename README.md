@@ -1,2 +1,2 @@
 # Earthshatter
-Django REST API using React on Froentend
+Django REST API using React on Frontend
