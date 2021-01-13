@@ -2,7 +2,7 @@
 Django REST API using React SPA's on Frontend, with PostgreSQL.
 
 
-***To view changes in React after compiling Webpack***
+***To view changes in React after compiling Webpack ->***
 ***Delete cookies or use incognito mode on localhost after running server and reload page.***
 
 
