@@ -1,7 +1,7 @@
 # Earthshatter
 Django REST API using React SPA's on Frontend, with PostgreSQL.
 
-# Note - to view changes in React/Webpack, delete cookies or use incognito mode on localhost after running server and reload page.
+_**Note - to view changes in React/Webpack, delete cookies or use incognito mode on localhost after running server and reload page.**_
 
 Development NO-DOCKER:
 1. $ git clone https://github.com/garyb9/Earthshatter.git
