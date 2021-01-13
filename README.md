@@ -1,5 +1,5 @@
 # Earthshatter
-Django REST API using React on Frontend
+Django REST API using React SPA's on Frontend, with PostgreSQL.
 
 Development NO-DOCKER:
 1. $ git clone https://github.com/garyb9/Earthshatter.git
@@ -14,5 +14,3 @@ Development with DOCKER (run Docker program):
 4. $ docker-compose build
 5. $ docker-compose up
 6. Goto: http://127.0.0.1:8000/
-
-
