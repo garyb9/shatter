@@ -2,7 +2,8 @@
 Django REST API using React SPA's on Frontend, with PostgreSQL.
 
 ```diff
-+ **Note - to view changes in React/Webpack, delete cookies or use incognito mode on localhost after running server and reload page.**
++ To view changes in React/Webpack ->
++ delete cookies or use incognito mode on localhost after running server and reload page.
 ```
 
 Development NO-DOCKER:
