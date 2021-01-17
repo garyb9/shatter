@@ -14,7 +14,7 @@ First time:
 In parallel / different terminals:
 1. Configuring PostgreSQL + CORS:
     - open pgAdmin4, make sure {your_db} is created
-    - add a file called 'settings_development.py' inside backend/django_app/mainapp (change variables to string):
+    - add a file called 'local_settings.py' inside backend/django_app/mainapp (change variables to string):
   
   ```python
     # PostgreSQL
