@@ -1,4 +1,4 @@
-# Earthshatter
+# Shatter
 Django REST API using React SPA's on Frontend, with PostgreSQL.
 
 
@@ -9,7 +9,7 @@ Django REST API using React SPA's on Frontend, with PostgreSQL.
 ## Development instructions
 Development NO-DOCKER:
 1. $ git clone https://github.com/garyb9/Earthshatter.git
-2. $ cd Earthshatter/src/frontend
+2. $ cd src/frontend
 3. $ npm install
 4. $ npm run dev
 5. $ cd ../
