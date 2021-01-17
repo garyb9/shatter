@@ -5,17 +5,18 @@ Django REST API using React SPA's on Frontend, with Docker, Nginx and PostgreSQL
 **Required - Python 3.7.9, conda 4.8.4, Node.js 15.5.1**
 
 First time:
-- $ git clone https://github.com/garyb9/Shatter.git
-- $ cd Shatter/
-- $ conda create -n shatter
-- $ conda activate shatter
-- $ pip install -r requirements.txt
+  - $ git clone https://github.com/garyb9/Shatter.git
+  - $ cd Shatter/
+  - $ conda create -n shatter
+  - $ conda activate shatter
+  - $ pip install -r requirements.txt
 
 In parallel / different terminals:
 1. Configuring PostgreSQL + CORS:
-  - add a file called 'settings_development.py' inside backend/django_app/mainapp:
+    - open pgAdmin4, make sure {your_db} is created
+    - add a file called 'settings_development.py' inside backend/django_app/mainapp (change variables to string):
   
-  ```
+  ```python
     # PostgreSQL
     DATABASES = {
         'default': {
@@ -33,21 +34,21 @@ In parallel / different terminals:
    
    ```
    
-  - Open pgAdmin4, make sure {your_db} is created
+
     
 2. Start development backend server:
-  - $ cd backend/django_app/
-  - Optional: to populate db with fake users, run: & python populate_users.py
-  - $ python manage.py migrate
-  - $ python manage.py runserver
+    - $ cd backend/django_app/
+    - Optional: to populate db with fake users, run: & python populate_users.py
+    - $ python manage.py migrate
+    - $ python manage.py runserver
 
 3. Start development frontend server:
-  - $ cd frontend/react_app/
-  - & npm install
-  - & npm start
+    - $ cd frontend/react_app/
+    - & npm install
+    - & npm start
 
 
 Development with DOCKER (run Docker + clone project):
-- $ docker build .
-- $ docker-compose build
-- $ docker-compose up
+  - $ docker build .
+  - $ docker-compose build
+  - $ docker-compose up
