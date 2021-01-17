@@ -14,11 +14,13 @@ First time:
 In parallel / different terminals:
 1. Configuring PostgreSQL + CORS:
   - add a file called 'settings_development.py' inside backend/django_app/mainapp:
-    # PostgreSQL 
+  
+  ```
+    # PostgreSQL
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
-            'NAME': '{db_name}',
+            'NAME': '{your_db}',
             'USER': '{your_user}',
             'PASSWORD': '{your_password}',
             'HOST': '127.0.0.1',
@@ -29,7 +31,9 @@ In parallel / different terminals:
     # Cross-Origin Resource Sharing Settings (CORS) 
     CORS_ORIGIN_ALLOW_ALL = True
    
-  - Open pgAdmin4, make sure {db_name} is created
+   ```
+   
+  - Open pgAdmin4, make sure {your_db} is created
     
 2. Start development backend server:
   - $ cd backend/django_app/
