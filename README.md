@@ -48,20 +48,18 @@ CORS_ORIGIN_ALLOW_ALL = True
 
 
 3. Start development backend server:
+- Backend server will run on http://127.0.0.1:8000/
 ```bash
 cd backend/django_app/
 python manage.py migrate
 python manage.py runserver
 ```
-Backend server will run on http://127.0.0.1:8000/
 
 
 4. Start development frontend server:
+- Frontend server will run on http://127.0.0.1:3000/
 ```bash
 cd frontend/react_app/
 npm install
 npm start
 ```
-Frontend server will run on http://127.0.0.1:3000/
-
-
