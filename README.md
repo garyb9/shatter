@@ -1,5 +1,5 @@
 # Shatter
-Django REST API using React SPA's on Frontend, with Docker, Nginx and PostgreSQL.
+Django REST API using React, Docker, Nginx and PostgreSQL.
 
 
 ## Development instructions (Docker)
@@ -16,7 +16,9 @@ docker-compose up
 ## Development instructions (No-Docker)
 **Required - Python 3.7.9, conda 4.8.4, Node.js 15.5.1**
 
-1. First time (use this env for all terminals/workdirs):
+1. First time:
+- Use this env for all terminals/workdirs
+
 ```bash
 git clone https://github.com/garyb9/Shatter.git
 cd Shatter/
@@ -26,8 +28,8 @@ pip install -r requirements.txt
 ```
 
 2. Configuring PostgreSQL + CORS:
-- run pgAdmin4, make sure {your_db} is created
-- add a file called 'local_settings.py' inside backend/django_app/mainapp (change variables to string):
+- Run pgAdmin4, make sure {your_db} is created
+- Add a file called 'local_settings.py' inside backend/django_app/mainapp/ (change variables to string):
   
 ```python
 # PostgreSQL
@@ -46,7 +48,6 @@ DATABASES = {
 CORS_ORIGIN_ALLOW_ALL = True
 ```
 
-
 3. Start development backend server:
 - Backend server will run on http://127.0.0.1:8000/
 ```bash
@@ -54,7 +55,6 @@ cd backend/django_app/
 python manage.py migrate
 python manage.py runserver
 ```
-
 
 4. Start development frontend server:
 - Frontend server will run on http://127.0.0.1:3000/
