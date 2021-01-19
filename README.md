@@ -1,54 +1,67 @@
 # Shatter
 Django REST API using React SPA's on Frontend, with Docker, Nginx and PostgreSQL.
 
-## Development instructions
+
+## Development instructions (Docker)
+**Required - Docker 20.10.2**
+
+Run Docker, then:
+```bash
+git clone https://github.com/garyb9/Shatter.git
+cd Shatter/
+docker-compose up
+```
+
+
+## Development instructions (No-Docker)
 **Required - Python 3.7.9, conda 4.8.4, Node.js 15.5.1**
 
-First time:
-  - $ git clone https://github.com/garyb9/Shatter.git
-  - $ cd Shatter/
-  - $ conda create -n shatter
-  - $ conda activate shatter
-  - $ pip install -r requirements.txt
+1. First time (use this env for all terminals/workdirs):
+```bash
+git clone https://github.com/garyb9/Shatter.git
+cd Shatter/
+conda create -n shatter
+conda activate shatter
+pip install -r requirements.txt
+```
 
-In parallel / different terminals:
-1. Configuring PostgreSQL + CORS:
-    - open pgAdmin4, make sure {your_db} is created
-    - add a file called 'local_settings.py' inside backend/django_app/mainapp (change variables to string):
+2. Configuring PostgreSQL + CORS:
+- run pgAdmin4, make sure {your_db} is created
+- add a file called 'local_settings.py' inside backend/django_app/mainapp (change variables to string):
   
-  ```python
-    # PostgreSQL
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.postgresql_psycopg2',
-            'NAME': '{your_db}',
-            'USER': '{your_user}',
-            'PASSWORD': '{your_password}',
-            'HOST': '127.0.0.1',
-            'PORT': '5432',
-        }
+```python
+# PostgreSQL
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': '{your_db}',
+        'USER': '{your_user}',
+        'PASSWORD': '{your_password}',
+        'HOST': '127.0.0.1',
+        'PORT': '5432',
     }
+}
 
-    # Cross-Origin Resource Sharing Settings (CORS) 
-    CORS_ORIGIN_ALLOW_ALL = True
-   
-   ```
-   
-
-    
-2. Start development backend server:
-    - $ cd backend/django_app/
-    - Optional: to populate db with fake users, run: & python populate_users.py
-    - $ python manage.py migrate
-    - $ python manage.py runserver
-
-3. Start development frontend server:
-    - $ cd frontend/react_app/
-    - & npm install
-    - & npm start
+# Cross-Origin Resource Sharing Settings (CORS) 
+CORS_ORIGIN_ALLOW_ALL = True
+```
 
 
-Development with DOCKER (run Docker + clone project):
-  - $ docker build .
-  - $ docker-compose build
-  - $ docker-compose up
+3. Start development backend server:
+```bash
+cd backend/django_app/
+python manage.py migrate
+python manage.py runserver
+```
+Backend server will run on http://127.0.0.1:8000/
+
+
+4. Start development frontend server:
+```bash
+cd frontend/react_app/
+npm install
+npm start
+```
+Frontend server will run on http://127.0.0.1:3000/
+
+
