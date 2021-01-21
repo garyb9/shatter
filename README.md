@@ -52,6 +52,7 @@ CORS_ORIGIN_ALLOW_ALL = True
 - Backend server will run on http://127.0.0.1:8000/
 ```bash
 cd backend/django_app/
+python manage.py makemigrations
 python manage.py migrate
 python manage.py runserver
 ```
