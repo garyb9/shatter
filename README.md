@@ -21,10 +21,10 @@ docker-compose up
 
 ```bash
 git clone https://github.com/garyb9/Shatter.git
-cd Shatter/
+cd Shatter
 conda create -n shatter
 conda activate shatter
-pip install -r requirements.txt
+pip install -r backend/requirements.txt
 ```
 
 2. Configuring PostgreSQL + CORS:
