@@ -1,5 +1,5 @@
 # Shatter
-Django REST API using React, Docker, Nginx and PostgreSQL.
+Cryptocurrency based Imageboard, built on Django REST API using React, Docker, Nginx and PostgreSQL.
 
 
 ## Development instructions (Docker)
