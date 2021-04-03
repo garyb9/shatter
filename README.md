@@ -28,19 +28,19 @@ pip install -r backend/requirements.txt
 ```
 
 2. Configuring PostgreSQL + CORS:
-- Run pgAdmin4, make sure {your_db} is created
-- Add a file called 'local_settings.py' inside backend/django_app/mainapp/ (change variables to string):
+- Run pgAdmin4, make sure to add .env file
+- Add a file called 'local_settings.py' inside backend/django_app/mainapp/:
   
 ```python
 # PostgreSQL
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': '{your_db}',
-        'USER': '{your_user}',
-        'PASSWORD': '{your_password}',
-        'HOST': '127.0.0.1',
-        'PORT': '5432',
+    "default": {
+        "ENGINE": os.environ.get("DB_ENGINE", "django.db.backends.sqlite3"),
+        "NAME": os.environ.get("DB_DATABASE", os.path.join(BASE_DIR, "db.sqlite3")),
+        "USER": os.environ.get("DB_USER", "user"),
+        "PASSWORD": os.environ.get("DB_PASSWORD", "password"),
+        "HOST": os.environ.get("DB_HOST", "localhost"),
+        "PORT": os.environ.get("DB_PORT", "5432"),
     }
 }
 
