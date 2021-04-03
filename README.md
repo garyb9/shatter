@@ -1,5 +1,6 @@
 # Shatter
-Cryptocurrency based Imageboard, built on Django REST API using React, Web3, Docker, Nginx and PostgreSQL.
+Shatter is an experimental Cryptocurrency and NFT based Imageboard, 
+built on Django REST API using React, Web3, Docker, Nginx and PostgreSQL.
 
 
 ## Development instructions (Docker)
