@@ -32,6 +32,9 @@ pip install -r backend/requirements.txt
 - Add a file called 'local_settings.py' inside backend/django_app/mainapp/:
   
 ```python
+import os
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
 # PostgreSQL
 DATABASES = {
     "default": {
@@ -44,8 +47,9 @@ DATABASES = {
     }
 }
 
-# Cross-Origin Resource Sharing Settings (CORS) 
+# (CORS) Cross-Origin Resource Sharing Settings
 CORS_ORIGIN_ALLOW_ALL = True
+
 ```
 
 3. Start development backend server:
