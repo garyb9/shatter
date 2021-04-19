@@ -1,5 +1,6 @@
 import React from "react";
-import { Route, Switch, Redirect, useHistory} from "react-router-dom";
+
+import { Route, Switch, Redirect, useHistory } from "react-router-dom";
 import Login from "./components/Auth/Login";
 import PasswordUpdate from "./components/Auth/PasswordUpdate";
 import Home from "./components/Layouts/Home";
@@ -15,7 +16,6 @@ import ThreadForm from "./components/Imageboard/ThreadForm";
 import Thread from "./components/Imageboard/Thread";
 import Threads from "./components/Imageboard/Threads";
 
-
 // A wrapper for <Route> that redirects to the login screen if you're not yet authenticated.
 function PrivateRoute({ isAuthenticated, children, ...rest }) {
   const history = useHistory();
@@ -23,7 +23,9 @@ function PrivateRoute({ isAuthenticated, children, ...rest }) {
     <Route
       {...rest}
       render={({ location }) =>
-        isAuthenticated ? (children) : (
+        isAuthenticated ? (
+          children
+        ) : (
           <Redirect
             to={{
               pathname: "/login/",
@@ -36,7 +38,6 @@ function PrivateRoute({ isAuthenticated, children, ...rest }) {
   );
 }
 
-
 function Urls(props) {
   const dispatch = useDispatch();
   // dispatch(actions.startLoading());
@@ -45,7 +46,6 @@ function Urls(props) {
   return (
     <div>
       <Switch>
-
         {/* ----- Login ----- */}
         <Route exact path="/login/">
           {" "}
@@ -56,7 +56,8 @@ function Urls(props) {
         <PrivateRoute
           exact
           path="/password_update/"
-          isAuthenticated={props.isAuthenticated}>
+          isAuthenticated={props.isAuthenticated}
+        >
           <PasswordUpdate {...props} />
         </PrivateRoute>
 
@@ -82,9 +83,9 @@ function Urls(props) {
 
         {/* ----- Thread ID ----- */}
         <Route exact path="/thread/:threadid">
-          <Thread />  
+          <Thread />
         </Route>
-        
+
         {/* ----- Threads ----- */}
         <Route exact path="/threads">
           <Threads />
@@ -98,18 +99,17 @@ function Urls(props) {
         {/* ----- Posts ----- */}
         <Route exact path="/posts/:threadid">
           <Posts />
-        </Route> 
+        </Route>
 
         {/* ----- Post Form ----- */}
         <Route exact path="/post-form/:boardid/:threadid/:postid">
           <PostForm />
-        </Route>           
+        </Route>
 
         {/* ----- Favorites ----- */}
         <Route exact path="/favorites">
           <Favorites />
         </Route>
-
       </Switch>
     </div>
   );
