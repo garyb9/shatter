@@ -1,7 +1,9 @@
 # Shatter
+
 Crypto wallet and NFT based Imageboard, 
 built on Django REST API using React, Web3, Docker, Nginx and PostgreSQL. 
 
+```WIP - Unfinished as of this commit!```
 
 ## Development instructions (Docker)
 **Required - Docker 20.10.2**
