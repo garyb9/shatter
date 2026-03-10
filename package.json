@@ -1,0 +1,52 @@
+{
+  "name": "shatter",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "NODE_ENV=production next build",
+    "build:ci": "CI=true NODE_ENV=production next build",
+    "start": "next start",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
+    "type-check": "tsc --noEmit",
+    "format": "prettier --write .",
+    "prep": "yarn build && yarn lint:fix && yarn format",
+    "ci": "yarn prep && yarn test"
+  },
+  "engines": {
+    "node": ">=22.0.0",
+    "yarn": ">=1.22.0"
+  },
+  "dependencies": {
+    "next": "15.4.10",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "styled-components": "^6.1.0",
+    "react-icons": "^5.5.0",
+    "react-markdown": "^10.1.0",
+    "remark-gfm": "^4.0.0",
+    "nprogress": "^0.2.0",
+    "viem": "^2.0.0",
+    "@tanstack/react-query": "^5.0.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.30.1",
+    "@next/eslint-plugin-next": "^15.4.1",
+    "@types/node": "^20.8.0",
+    "@types/nprogress": "^0.2.3",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "@typescript-eslint/eslint-plugin": "^8.36.0",
+    "@typescript-eslint/parser": "^8.36.0",
+    "eslint": "^9.30.1",
+    "eslint-config-next": "^14.0.0",
+    "eslint-config-prettier": "^10.1.5",
+    "eslint-plugin-prettier": "^5.5.1",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "prettier": "^3.6.2",
+    "typescript": "^5.2.0",
+    "typescript-eslint": "^8.37.0"
+  }
+}

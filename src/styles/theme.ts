@@ -1,0 +1,60 @@
+export const theme = {
+  colors: {
+    background: '#0a0a0a',
+    text: '#f0f0f0',
+    textSecondary: '#a0a0a0',
+    link: '#00e0c6',
+    linkHover: '#00e0c6',
+    greenMuted: '#00cfc0',
+    border: '#2a2a2a',
+    borderLight: '#3a3a3a',
+    codeBackground: '#1a1a1a',
+    white: '#ffffff',
+    shadowLight: 'rgba(0, 0, 0, 0.04)',
+    shadowMedium: 'rgba(0, 0, 0, 0.1)',
+    borderTransparent: 'rgba(160, 160, 160, 0.18)',
+    // Transaction type accents
+    txValue: '#00e0c6',
+    txContract: '#7c6af7',
+    txCreate: '#f7c06a',
+    txReverted: '#f76a6a',
+    txPending: '#a0a0a0',
+  },
+  fonts: {
+    body: 'Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+    heading: 'Space Grotesk, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+    mono: '"Fira Code", "Monaco", "Consolas", monospace',
+  },
+  fontSizes: {
+    xs: '0.75rem',
+    sm: '0.875rem',
+    base: '1rem',
+    lg: '1.125rem',
+    xl: '1.25rem',
+    '2xl': '1.5rem',
+    '3xl': '1.875rem',
+    '4xl': '2.25rem',
+    '5xl': '3rem',
+  },
+  spacing: {
+    xs: '0.25rem',
+    sm: '0.5rem',
+    base: '0.75rem',
+    md: '1rem',
+    lg: '1.5rem',
+    xl: '2rem',
+    '2xl': '3rem',
+    '3xl': '4rem',
+  },
+  maxWidth: {
+    content: '1100px',
+  },
+  breakpoints: {
+    sm: '640px',
+    md: '768px',
+    lg: '1024px',
+    xl: '1280px',
+  },
+};
+
+export type Theme = typeof theme;
